@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.WearherContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.box {
+width: 50%;
+}
+
+.Aside {
+    background:url(./images/Main-Bg.jpg) top center no-repeat;
+    background-size: cover;
+}
+
+.Bside {
+    background-color: #fff;
+    padding: 30px;
+
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Bside::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 149, 0);
+    width: 5px;
+    height: 50vh;
+    padding: 0px;
+    top: 0;
+    left: 50%;
+}
+
+.Bside::after {
+    content: '';
+    position: absolute;
+    background-color:  rgb(221, 0, 255);
+    width: 5px;
+    height: 50vh;
+    padding: 0px;
+    bottom: 0;
+    left: 50%;
+}
+
+.Logo {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;;
+    font-weight: 600;
+    color: rgb(221, 0, 255);
+    font-family: 'Sora', sans-serif;
+}
+
+
+.Logo span p {
+    color: rgb(255, 149, 0);
+    display: inline;
+}
+
+
+.SerchBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 25px;
+}
+
+#serachid {
+    width: 100%;
+    padding: 15px 55px 15px 35px ;
+    opacity: 1;
+    border-radius: 50px;
+    border: 2px solid rgb(217, 217, 217);
+    outline: none;
+    transition: 0.3s;
+}
+
+#serachid:focus    {
+    border: 2px solid rgb(221, 0, 255);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+
+}
+
+.SerchBox i {
+    position: absolute;
+    left: 10px;
+    width: 15px;
+    color: rgb(255, 149, 0);
+}
+
+.SerchBox button {
+    position: absolute;
+    right: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color:  rgb(255, 149, 0);
+    border-style: none;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.SerchBox button:hover{
+    background-color:  rgb(221, 0, 255);
+}
+
+
+
+
+
+
+
+.weather-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.weather-box img {
+    width: 20%;
+    margin-top: 10px;
+}
+
+.weather-box .temperature {
+    color: #06283D;
+    font-size: 3rem;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+.weather-box .temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.weather-box .description {
+    color: #06283Ddc;
+    align-self: center;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Sora', sans-serif;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-family: 'Sora', sans-serif;
+}
+
+.weather-details .humidity,
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+    font-family: 'Sora', sans-serif;
+}
+
+.weather-details .humidity {
+    justify-content: flex-start;
+}
+
+.weather-details .wind {
+    justify-content: flex-end;
+}
+
+.weather-details i {
+    color: #06283Ddc;
+    font-size: 26px;
+    margin-top: 6px;
+}
+
+.weather-details span {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-details p {
+    color: #06283Ddc;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not-found img {
+    width: 30%;
+}
+
+.not-found p {
+    color: #06283Ddc;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+    font-family: 'Sora', sans-serif;
+}
+
+.weather-box,
+.weather-details {
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn {
+    animation: .5s fadeIn forwards;
+    animation-delay: .5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+.soc-icons {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    gap: 30px;
+
+    margin-top: 80px;
+}
+
+.soc-icons img {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.soc-icons img:hover {
+    transition: 0.5s;
+    background-color: rgb(221, 0, 255);
+}
+
+@media (max-width:1109px) {
+    .weather-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .soc-icons {
+        display: none;
+    }
+}
+
+
+@media (max-width:733px) {
+    .Aside{
+        display: none;
+    }
+    .weather-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Bside::before{
+display: none;
+    }
+    .Bside::after {
+ display: none;
+    }
+}
